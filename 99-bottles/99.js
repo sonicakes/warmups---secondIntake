@@ -26,26 +26,36 @@ console.log("connected 99  bottles");
 // Count through any number of bottles.
 // Be able to count between a range of numbers (ie, 20 to 10).
 
-const beers = function(){
-//for numbers 99 to 2, print the song just changing the numbers
-let element;
-for (let index = 99; index >= 0; index--) {
-    if (index !== 1 && index !==0) {
-        element = `${index} bottles of beer on the wall, ${index} bottles of beer.\n Take one down, pass it around, ${index-1} bottles of beer on the wall...`;
+const beers = function () {
+        //for numbers 99 to 2, print the song just changing the numbers
+        let element;
+        // for (let index = 99; index >= 0; index--) {
+        //     if (index !== 1 && index !==0) {
+        //         element = `${index} bottles of beer on the wall, ${index} bottles of beer.\n Take one down, pass it around, ${index-1} bottles of beer on the wall...`;
 
-    }else if (index===1){
-        element = ` 1 bottle of beer on the wall, 1 bottle of beer.\n Take it down and pass it around, no more bottles of beer on the wall.`
+        //     }else if (index===1){
+        //         element = ` 1 bottle of beer on the wall, 1 bottle of beer.\n Take it down and pass it around, no more bottles of beer on the wall.`
 
-    }
+        //     }
 
-    else {
-        element = `No more bottles of beer on the wall, no more bottles of beer.\n Go to the store and buy some more, 99 bottles of beer on the wall.`
-    }
-    console.log(element);
+        //     else {
+        //         element = `No more bottles of beer on the wall, no more bottles of beer.\n Go to the store and buy some more, 99 bottles of beer on the wall.`
+        //     }
+        //     console.log(element);
 
-}
+        // }
+        for (let index = 99; index >= 0; index--) {
+            if (index === 1) {
+                element = ` 1 bottle of beer on the wall, 1 bottle of beer.\n Take it down and pass it around, no more bottles of beer on the wall.`
+            } else if (index === 0) {
+                    element = `No more bottles of beer on the wall, no more bottles of beer.\n Go to the store and buy some more, 99 bottles of beer on the wall.`
+                } else {
+                    element = `${index} bottles of beer on the wall, ${index} bottles of beer.\n Take one down, pass it around, ${index-1} bottles of beer on the wall...`;
 
+                }
+                console.log(element);
 
-}
+            }
+        }
 
-beers();
+        beers();
